@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="static/js/vue.js"></script>
-    <script src="static/js/index_copy.js"></script>
+    <script src="static/js/jquery-3.5.1.js"></script>
     <link href="static/index_copy.css" rel="stylesheet">
 </head>
 <body>
@@ -13,6 +13,8 @@
     <head-div :navigation_datas="navigation_datas"></head-div>
     <!--    身体-->
     <body-div></body-div>
+    <!--    底部-->
+    <bottom-div :navigation_datas="navigation_datas"></bottom-div>
 </div>
 </body>
 <!--头部-->
@@ -28,7 +30,7 @@
                 </div>
                 <!--            导航栏-->
                 <div class="navigation">
-                    <ul>
+                    <ul v-navigationselect>
                         <li v-for="tage in navigation_datas" style="float: left">
                             <a href="#">{{ tage }}</a>
                         </li>
@@ -44,10 +46,10 @@
     <div class="body_1">
         <!--        居中-->
         <div class="body_center">
-            <!--            内容一-->
+            <!--            内容1一-->
             <div class="content_1">
                 <!--                左边内容-->
-                <div class="left_content">
+                <div class="content_1_left_content">
                     <h4>谁的蜕变没流过血，疼痛，忍着，你的善良必须带点锋芒</h4>
                     <h2>雷霆开幕 Σ( ￣□￣||)&lt;</h2>
                     <blockquote class="lead">
@@ -62,7 +64,7 @@
                     <a href="#">学到更多</a>
                 </div>
                 <!--                右边内容-->
-                <div class="right_content">
+                <div class="content_1_right_content">
                     <!--                    视频-->
                     <div class="video">
                         <img src="static/images/fb71671ac4451e78e6eb9863a7f1c8a9f24a61f2.jpg" alt="">
@@ -73,53 +75,149 @@
             <!--            内容2-->
             <div class="content_2">
                 <!--                左内容-->
-                <div class="left_content" @mouseenter="hover_content_2_left_content">
+                <div class="content_2_content" style="float: left" @mouseenter="content_2_left_judge=true"
+                     @mouseleave="content_2_left_judge=false">
                     <img src="static/images/07dfabae0944087adeb453521591ea6a4467258b.jpg" alt="">
                     <!--           遮挡物-->
-                    <transition name="left_content_shelter">
-                        <div class="shelter" v-if="hover_left_content"></div>
+                    <transition name="excessive_picture_information">
+                        <div class="shelter" v-show="content_2_left_judge">
+                            <h3>
+                                愿你活得又酷又潇洒，无畏无惧，拿得起又放得下，爱的时候倾尽全力，不爱了也能昂首阔步转身就走
+                            </h3>
+                            <p>
+                                还有这世上，最不缺的就是玻璃心。你需要让自己的内心更强大，你需要让自己的能力配得上自己的梦想
+                            </p>
+                            <a href="#" @click="Jump_pictures_page"></a>
+                        </div>
                     </transition>
                 </div>
                 <!--                右内容-->
-                <div class="right_content">
+                <div class="content_2_content" style="float: right" @mouseenter="content_2_right_judge=true"
+                     @mouseleave="content_2_right_judge=false">
                     <img src="static/images/9c9d21e11a02340b457c287d49d1e690a4cbaad1.jpg" alt="">
                     <!--                    遮挡物-->
-                    <div class="shelter"></div>
+                    <transition name="excessive_picture_information">
+                        <div class="shelter" v-show="content_2_right_judge">
+                            <h3>希望你也有傲人的资本 而不是自甘堕落</h3>
+                            <p>要成长，要一个人走过人山人海 </p>
+                            <a href="#" @click="Jump_pictures_page"></a>
+                        </div>
+                    </transition>
                 </div>
+            </div>
+            <!--            内容3-->
+            <div class="content_2">
+                <!--                左内容 空 -->
+                <div class="content_2_content" style="float: left">
+
+                </div>
+                <!--                右内容-->
+                <div class="content_2_content" style="float: right" @mouseenter="content_3_right_judge=true"
+                     @mouseleave="content_3_right_judge=false">
+                    <img src="static/images/d514d59a86280391c990a54ef1f77a05a354f26a.jpg" alt="">
+                    <!--                    遮挡物-->
+                    <transition name="excessive_picture_information">
+                        <div class="shelter" v-show="content_3_right_judge">
+                            <h3>
+                                我可以选择认输，但是绝不放弃，即使尘埃落定我笃信的是
+                                我不会知难而退，今天的我，比昨天更强，今后也一样
+                            </h3>
+                            <p>成长有一瞬间给我的感觉就是，并不是学会了避开危险，而是学会了不怕疼痛</p>
+                            <a href="#" @click="Jump_pictures_page"></a>
+                        </div>
+                    </transition>
+                </div>
+            </div>
+            <!--            内容3-->
+            <div class="content_2">
+                <!--                左内容-->
+                <div class="content_2_content" style="float: left" @mouseenter="content_4_left_judge=true"
+                     @mouseleave="content_4_left_judge=false">
+                    <img src="static/images/ac16c494f1d03342c12ca28cb4f2e3589bce6f23.jpg" alt="">
+                    <!--                    遮挡物-->
+                    <transition name="excessive_picture_information">
+                        <div class="shelter" v-show="content_4_left_judge">
+                            <h3>亲爱的自己，学会控制自己的情绪，谁都不欠你，所以没有道理你跟别人随便发脾气、耍性子
+                                。不要抓住回忆不放，断了线的风筝只能让它飞，放过它，更是放过自己
+                            </h3>
+                            <p>你需要跟自己比的唯一一个人，就是曾经的自己。你需要比一个人变得更好，那个人就是现在的你 </p>
+                            <a href="#" @click="Jump_pictures_page"></a>
+                        </div>
+                    </transition>
+                </div>
+                <!--                右内容 空  -->
+                <div class="content_2_content" style="float: right"></div>
             </div>
         </div>
     </div>
 </template>
-<script>
-    // 头部
-    Vue.component('head-div', {
-        template: '#head_style',
-        props: {
-            navigation_datas: {
-                type: Array
-            }
-        }
-    });
-    // 身体
-    Vue.component('body-div', {
-        template: '#body_style',
-        methods: {
-            hover_content_2_left_content: function () {
-                this.hover_left_content = !this.hover_left_content;
-                console.log(this.hover_left_content);
-            }
-        },
-        data: function () {
-            return {
-                hover_left_content: false
-            }
-        }
-    });
-    new Vue({
-        el: '#base',
-        data: {
-            navigation_datas: ['关于我们', '问题', '事件', '画廊', '多媒体', '微信', '联系']
-        }
-    });
-</script>
+<!--底部-->
+<template id="bottom_style">
+    <div class="bottom_placeholder">
+        <div class="bottom_center">
+            <!--            导航栏-->
+            <div class="bottom_navigation">
+                <ul>
+                    <li v-for="tage in navigation_datas" style="float: left">
+                        <a href="#">{{ tage }}</a>
+                    </li>
+                </ul>
+            </div>
+            <!--            搜索框-->
+            <div class="bottom_search_box">
+                <input type="text" placeholder="搜索">
+            </div>
+        </div>
+    </div>
+</template>
+<!--<script>-->
+<!--    // 头部-->
+<!--    Vue.component('head-div', {-->
+<!--        template: '#head_style',-->
+<!--        props: {-->
+<!--            navigation_datas: {-->
+<!--                type: Array-->
+<!--            }-->
+<!--        }-->
+<!--    });-->
+<!--    // 身体-->
+<!--    Vue.component('body-div', {-->
+<!--        template: '#body_style',-->
+<!--        methods: {-->
+<!--            // 点击链接跳转到图片页面-->
+<!--            Jump_pictures_page: function (event) {-->
+<!--                event.stopPropagation();-->
+<!--                location.href = $($(event.target).parent().siblings()[0]).attr('src')-->
+<!--            }-->
+<!--        },-->
+<!--        data: function () {-->
+<!--            return {-->
+<!--                // 内容2 左图-->
+<!--                content_2_left_judge: false,-->
+<!--                // 内容2 右图-->
+<!--                content_2_right_judge: false,-->
+<!--                // 内容3 右图-->
+<!--                content_3_right_judge: false,-->
+<!--                // 内容4 左图-->
+<!--                content_4_left_judge: false-->
+<!--            }-->
+<!--        }-->
+<!--    });-->
+<!--    // 底部-->
+<!--    Vue.component('bottom-div', {-->
+<!--        template: '#bottom_style',-->
+<!--        props: {-->
+<!--            navigation_datas: {-->
+<!--                type: Array-->
+<!--            }-->
+<!--        }-->
+<!--    });-->
+<!--    new Vue({-->
+<!--        el: '#base',-->
+<!--        data: {-->
+<!--            navigation_datas: ['关于我们', '问题', '事件', '画廊', '多媒体', '微信', '联系']-->
+<!--        }-->
+<!--    });-->
+<!--</script>-->
+<script src="static/js/index_copy.js"></script>
 </html>
