@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="static/js/vue.js"></script>
+    <script src="static/js/jquery-3.5.1.js"></script>
     <script src="static/js/index_copy.js"></script>
     <link href="static/index_copy.css" rel="stylesheet">
 </head>
@@ -44,10 +45,10 @@
     <div class="body_1">
         <!--        居中-->
         <div class="body_center">
-            <!--            内容一-->
+            <!--            内容1一-->
             <div class="content_1">
                 <!--                左边内容-->
-                <div class="left_content">
+                <div class="content_1_left_content">
                     <h4>谁的蜕变没流过血，疼痛，忍着，你的善良必须带点锋芒</h4>
                     <h2>雷霆开幕 Σ( ￣□￣||)&lt;</h2>
                     <blockquote class="lead">
@@ -62,7 +63,7 @@
                     <a href="#">学到更多</a>
                 </div>
                 <!--                右边内容-->
-                <div class="right_content">
+                <div class="content_1_right_content">
                     <!--                    视频-->
                     <div class="video">
                         <img src="static/images/fb71671ac4451e78e6eb9863a7f1c8a9f24a61f2.jpg" alt="">
@@ -73,18 +74,25 @@
             <!--            内容2-->
             <div class="content_2">
                 <!--                左内容-->
-                <div class="left_content" @mouseenter="hover_content_2_left_content">
+                <div class="content_2_left_content" @click="content_2_left_content_show">
                     <img src="static/images/07dfabae0944087adeb453521591ea6a4467258b.jpg" alt="">
                     <!--           遮挡物-->
-                    <transition name="left_content_shelter">
-                        <div class="shelter" v-if="hover_left_content"></div>
+                    <transition name="content_2_left_content_shelter">
+                        <div class="shelter" v-if="hover_left_content">
+                            <h3>
+                                愿你活得又酷又潇洒，无畏无惧，拿得起又放得下，爱的时候倾尽全力，不爱了也能昂首阔步转身就走
+                            </h3>
+                            <p>
+                                还有这世上，最不缺的就是玻璃心。你需要让自己的内心更强大，你需要让自己的能力配得上自己的梦想
+                            </p>
+                        </div>
                     </transition>
                 </div>
                 <!--                右内容-->
                 <div class="right_content">
                     <img src="static/images/9c9d21e11a02340b457c287d49d1e690a4cbaad1.jpg" alt="">
                     <!--                    遮挡物-->
-                    <div class="shelter"></div>
+                    <!--                    <div class="shelter"></div>-->
                 </div>
             </div>
         </div>
@@ -104,10 +112,9 @@
     Vue.component('body-div', {
         template: '#body_style',
         methods: {
-            hover_content_2_left_content: function () {
+            content_2_left_content_show: function () {
                 this.hover_left_content = !this.hover_left_content;
-                console.log(this.hover_left_content);
-            }
+            },
         },
         data: function () {
             return {
