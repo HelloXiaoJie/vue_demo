@@ -51,6 +51,7 @@ Vue.directive('navigationselect', function (el, binding) {
 new Vue({
     el: '#base',
     data: {
+        //['关于我们', '问题', '事件', '画廊', '多媒体', '微信', '联系']
         navigation_datas: ['关于我们', '问题', '事件', '画廊', '多媒体', '微信', '联系']
     }
 });
