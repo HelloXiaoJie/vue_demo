@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="static/js/vue.js"></script>
+    <script src="static/js/index_copy.js"></script>
+    <link href="static/index_copy.css" rel="stylesheet">
+</head>
+<body>
+<div id="base">
+    <!--    头部-->
+    <head-div :navigation_datas="navigation_datas"></head-div>
+    <!--    身体-->
+    <body-div></body-div>
+</div>
+</body>
+<!--头部-->
+<template id="head_style">
+    <!--头部-->
+    <div class="head">
+        <!--    居中内容-->
+        <div class="centered_content">
+            <!--        内容-->
+            <div class="content">
+                <div class="logo_image">
+                    <img src="static/images/20201122185707.png" alt="" height="52">
+                </div>
+                <!--            导航栏-->
+                <div class="navigation">
+                    <ul>
+                        <li v-for="tage in navigation_datas" style="float: left">
+                            <a href="#">{{ tage }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<!--身体-->
+<template id="body_style">
+    <!--    身体-->
+    <div class="body_1">
+        <!--        居中-->
+        <div class="body_center">
+            <!--            内容一-->
+            <div class="content_1">
+                <!--                左边内容-->
+                <div class="left_content">
+                    <h4>谁的蜕变没流过血，疼痛，忍着，你的善良必须带点锋芒</h4>
+                    <h2>雷霆开幕 Σ( ￣□￣||)&lt;</h2>
+                    <blockquote class="lead">
+                        所谓的诗和远方，不过是，要把眼前的苟且，熬过了才有
+                    </blockquote>
+                    <p>
+                        当你下定决定做一件事，那就去尽力做，即便这件事最后没有达到你的预期回
+                        报，但你还是得认真、努力去完成，在这过程中，你会逐渐认识到自己的不足
+                        ，认清自己真正想要什么。给自己一个期限，不用告诉所有人，不要犹豫，直
+                        到你真的尽力为止
+                    </p>
+                    <a href="#">学到更多</a>
+                </div>
+                <!--                右边内容-->
+                <div class="right_content">
+                    <!--                    视频-->
+                    <div class="video">
+                        <img src="static/images/fb71671ac4451e78e6eb9863a7f1c8a9f24a61f2.jpg" alt="">
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <!--            内容2-->
+            <div class="content_2">
+                <!--                左内容-->
+                <div class="left_content" @mouseenter="hover_content_2_left_content">
+                    <img src="static/images/07dfabae0944087adeb453521591ea6a4467258b.jpg" alt="">
+                    <!--           遮挡物-->
+                    <transition name="left_content_shelter">
+                        <div class="shelter" v-if="hover_left_content"></div>
+                    </transition>
+                </div>
+                <!--                右内容-->
+                <div class="right_content">
+                    <img src="static/images/9c9d21e11a02340b457c287d49d1e690a4cbaad1.jpg" alt="">
+                    <!--                    遮挡物-->
+                    <div class="shelter"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<script>
+    // 头部
+    Vue.component('head-div', {
+        template: '#head_style',
+        props: {
+            navigation_datas: {
+                type: Array
+            }
+        }
+    });
+    // 身体
+    Vue.component('body-div', {
+        template: '#body_style',
+        methods: {
+            hover_content_2_left_content: function () {
+                this.hover_left_content = !this.hover_left_content;
+                console.log(this.hover_left_content);
+            }
+        },
+        data: function () {
+            return {
+                hover_left_content: false
+            }
+        }
+    });
+    new Vue({
+        el: '#base',
+        data: {
+            navigation_datas: ['关于我们', '问题', '事件', '画廊', '多媒体', '微信', '联系']
+        }
+    });
+</script>
+</html>

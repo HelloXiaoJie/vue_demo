@@ -1,0 +1,87 @@
+body.politics_version .header_style_01 {
+    /*top: 133px;*/
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.header_style_01 {
+    background-color: rgba(255, 255, 255, 0.1);
+    display: block;
+    left: 0;
+    padding: 20px 40px !important;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 111;
+}
+
+.header_style_01 .navbar-default {
+    background-color: transparent;
+    border: 0;
+}
+
+.header_style_01 .navbar,
+.header_style_01 .navbar-nav,
+.header_style_01 .navbar-default,
+.header_style_01 .nav {
+    margin-bottom: 0 !important;
+}
+
+.header_style_01 .navbar-brand {
+    padding: 2px 15px 0 15px;
+}
+
+.header_style_01 .navbar-default .navbar-nav > li > a {
+    border-radius: 0;
+    color: #076799;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: capitalize;
+    background-color: transparent;
+}
+
+.header_style_01 .navbar-default .navbar-nav > li a {
+    background-color: transparent !important;
+}
+
+.header_style_01 .navbar-default .navbar-nav > li a::after {
+    content: '';
+    width: 0;
+    height: 15%;
+    background: #076799;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 4px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    z-index: -1;
+}
+
+.header_style_01 .navbar-default .navbar-nav > li a.active::after {
+    width: 100%;
+}
+
+.header_style_01 .navbar-default .navbar-nav > li a.active {
+    color: #f44336;
+}
+
+.header_style_01 .navbar-default .navbar-nav > li:hover a,
+.header_style_01 .navbar-default .navbar-nav > li:focus a {
+
+}
+
+.header_style_01 .navbar-right > li {
+    margin-top: 2px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.header_style_01 .nav > li > a {
+    padding: 15px 0px;
+    margin: 0px 15px;
+}
