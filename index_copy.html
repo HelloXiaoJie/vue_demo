@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="static/js/vue.js"></script>
+    <script src="static/js/vue-router.js"></script>
     <script src="static/js/jquery-3.5.1.js"></script>
     <link href="static/index_copy.css" rel="stylesheet">
 </head>
@@ -32,7 +33,7 @@
                 <div class="navigation">
                     <ul v-navigationselect>
                         <li v-for="tage in navigation_datas" style="float: left">
-                            <a href="#">{{ tage }}</a>
+                            <a href="#">{{tage[0]}}</a>
                         </li>
                     </ul>
                 </div>
@@ -159,7 +160,7 @@
             <div class="bottom_navigation">
                 <ul>
                     <li v-for="tage in navigation_datas" style="float: left">
-                        <a href="#">{{ tage }}</a>
+                        <a href="#">{{ tage[0] }}</a>
                     </li>
                 </ul>
             </div>
@@ -170,54 +171,6 @@
         </div>
     </div>
 </template>
-<!--<script>-->
-<!--    // 头部-->
-<!--    Vue.component('head-div', {-->
-<!--        template: '#head_style',-->
-<!--        props: {-->
-<!--            navigation_datas: {-->
-<!--                type: Array-->
-<!--            }-->
-<!--        }-->
-<!--    });-->
-<!--    // 身体-->
-<!--    Vue.component('body-div', {-->
-<!--        template: '#body_style',-->
-<!--        methods: {-->
-<!--            // 点击链接跳转到图片页面-->
-<!--            Jump_pictures_page: function (event) {-->
-<!--                event.stopPropagation();-->
-<!--                location.href = $($(event.target).parent().siblings()[0]).attr('src')-->
-<!--            }-->
-<!--        },-->
-<!--        data: function () {-->
-<!--            return {-->
-<!--                // 内容2 左图-->
-<!--                content_2_left_judge: false,-->
-<!--                // 内容2 右图-->
-<!--                content_2_right_judge: false,-->
-<!--                // 内容3 右图-->
-<!--                content_3_right_judge: false,-->
-<!--                // 内容4 左图-->
-<!--                content_4_left_judge: false-->
-<!--            }-->
-<!--        }-->
-<!--    });-->
-<!--    // 底部-->
-<!--    Vue.component('bottom-div', {-->
-<!--        template: '#bottom_style',-->
-<!--        props: {-->
-<!--            navigation_datas: {-->
-<!--                type: Array-->
-<!--            }-->
-<!--        }-->
-<!--    });-->
-<!--    new Vue({-->
-<!--        el: '#base',-->
-<!--        data: {-->
-<!--            navigation_datas: ['关于我们', '问题', '事件', '画廊', '多媒体', '微信', '联系']-->
-<!--        }-->
-<!--    });-->
-<!--</script>-->
+
 <script src="static/js/index_copy.js"></script>
 </html>

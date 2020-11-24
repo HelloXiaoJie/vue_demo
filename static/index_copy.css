@@ -347,3 +347,119 @@ li {
     top: calc(63px / 2 - 10px);
     left: 365px;
 }
+
+.index_1_copy_body {
+    width: 100%;
+    background-color: #f2f3f5;
+}
+
+.index_1_copy_center_content {
+    width: 1170px;
+    height: 693px;
+    margin-left: auto;
+    margin-right: auto;
+    /*border: 1px solid;*/
+    margin-bottom: 100px;
+}
+
+.index_1_copy_content_1 {
+    width: 100%;
+    height: 140px;
+    /*border: 1px solid;*/
+    padding-bottom: 60px;
+}
+
+.index_1_copy_content_1 h3 {
+    font-weight: bold;
+    font-size: 42px;
+    margin: 0 0 25px;
+    padding: 0;
+    text-transform: none;
+}
+
+.index_1_copy_content_1 p {
+    color: #999;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 33px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.index_1_copy_left_content {
+    width: 457px;
+    height: 453px;
+    display: inline-block;
+    float: left;
+}
+
+.index_1_copy_left_content img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.index_1_copy_left_content h4 {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 20px 0 20px;
+    text-transform: capitalize;
+    line-height: 120% !important;
+    color: #1f1f1f;
+    margin: 0;
+    letter-spacing: 0;
+}
+
+.index_1_copy_left_content p {
+    margin: 0 0 10px;
+    box-sizing: border-box;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: #999;
+    font-size: 15px;
+    font-family: 'Exo', sans-serif;
+    line-height: 1.80857;
+}
+
+.index_1_copy_right_content {
+    width: 682px;
+    height: 492px;
+    display: inline-block;
+    float: right;
+    /*border: 1px solid;*/
+}
+
+.index_1_copy_right_a {
+    padding: 20px 0;
+    display: block;
+    position: relative;
+    border-bottom: 1px dashed #f44336;
+    box-sizing: border-box;
+    color: #999;
+    font-size: 15px;
+    font-family: 'Exo', sans-serif;
+    line-height: 1.80857;
+}
+
+.index_1_copy_right_a img {
+    max-width: 100px;
+    margin: 0 30px 0 0;
+    float: left;
+    border-radius: 6px;
+    display: block;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+}
+
+.index_1_copy_right_a h4 {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 0;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    line-height: 120%;
+    color: #1f1f1f;
+    margin: 0;
+}

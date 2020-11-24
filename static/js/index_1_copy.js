@@ -7,29 +7,7 @@ Vue.component('head-div', {
         }
     },
 });
-// 身体
-Vue.component('body-div', {
-    template: '#body_style',
-    methods: {
-        // 点击链接跳转到图片页面
-        Jump_pictures_page: function (event) {
-            event.stopPropagation();
-            location.href = $($(event.target).parent().siblings()[0]).attr('src')
-        }
-    },
-    data: function () {
-        return {
-            // 内容2 左图
-            content_2_left_judge: false,
-            // 内容2 右图
-            content_2_right_judge: false,
-            // 内容3 右图
-            content_3_right_judge: false,
-            // 内容4 左图
-            content_4_left_judge: false
-        }
-    }
-});
+
 // 底部
 Vue.component('bottom-div', {
     template: '#bottom_style',
@@ -37,7 +15,6 @@ Vue.component('bottom-div', {
 });
 
 Vue.directive('navigationselect', function (el, binding) {
-    // console.log($(el).children());
     $(el).children().bind('mouseover', function () {
         $(this).css({'border-bottom': '5px solid #076799'}).siblings().css({'border-bottom': ''})
     });
@@ -49,8 +26,6 @@ Vue.directive('navigationselect', function (el, binding) {
 new Vue({
     el: '#base',
     data: {
-        //['关于我们', '问题', '事件', '画廊', '多媒体', '微信', '联系']
-        // navigation_datas: ['关于我们', '问题', '事件', '画廊', '多媒体', '微信', '联系'],
         navigation_datas: {
             'data_1': ['关于我们', 'index_copy.html'],
             'data_2': ['问题', 'index_copy.html'],

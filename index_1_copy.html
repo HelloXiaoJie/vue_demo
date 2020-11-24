@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="static/js/vue.js"></script>
+    <script src="static/js/vue-router.js"></script>
+    <script src="static/js/jquery-3.5.1.js"></script>
+    <link href="static/index_copy.css" rel="stylesheet">
+</head>
+<div id="base">
+    <!--    头部-->
+    <head-div :navigation_datas="navigation_datas"></head-div>
+    <!--    身体-->
+    <div class="index_1_copy_body">
+        <div class="index_1_copy_center_content">
+            <div class="index_1_copy_content_1">
+                <h3>问题与计划</h3>
+                <p>我本来就不欠你什么。从我这里，你该拿的，不该拿的，你都拿了。我没说话，也没觉得有什么问题。只是以后不会了<br>
+                    长大了，不能总做父母的小棉袄，你要成为他们的防弹衣，还要做自己的铠甲!
+                </p>
+            </div>
+            <div class="index_1_copy_content_2">
+                <!--                左内容-->
+                <div class="index_1_copy_left_content">
+                    <img src="static/images/b8c45342aeb02ceda1e1c838730c02ab9631f3c4.png" alt="">
+                    <h4>"梦想注定是孤独的旅程，路上少不了质疑和嘲笑，但那又怎样，哪怕遍体鳞伤也要勇往直前。</h4>
+                    <p>非让现实给你一巴掌，你才知道社会有多虚伪，非让所谓的朋友把你伤的什么都不是，你才知道人心可畏。</p>
+                    <p>与其违心赔笑，不如一人安静，与其在意别人的背弃和不善，不如经营自己的尊严和美好。</p>
+                </div>
+                <!--                右内容-->
+                <div class="index_1_copy_right_content">
+                    <div class="index_1_copy_right_a">
+                        <img src="static/images/7bc9a8fc5b033ed546f8ed37b301eb4fe6c94676.jpg" alt="">
+                        <h4>demo1</h4>
+                        <p>
+                            其实，没有什么东西是不能放手的。时日渐远，当你回望，你会发现，你曾经以为不
+                            可以放手的东西，只是生命里的一块跳板，令你成长。
+                        </p>
+                    </div>
+                    <div class="index_1_copy_right_a">
+                        <img src="static/images/7bc9a8fc5b033ed546f8ed37b301eb4fe6c94676.jpg" alt="">
+                        <h4>demo1</h4>
+                        <p>
+                            其实，没有什么东西是不能放手的。时日渐远，当你回望，你会发现，你曾经以为不
+                            可以放手的东西，只是生命里的一块跳板，令你成长。
+                        </p>
+                    </div>
+                    <div class="index_1_copy_right_a">
+                        <img src="static/images/7bc9a8fc5b033ed546f8ed37b301eb4fe6c94676.jpg" alt="">
+                        <h4>demo1</h4>
+                        <p>
+                            其实，没有什么东西是不能放手的。时日渐远，当你回望，你会发现，你曾经以为不
+                            可以放手的东西，只是生命里的一块跳板，令你成长。
+                        </p>
+                    </div>
+                    <div class="index_1_copy_right_a">
+                        <img src="static/images/7bc9a8fc5b033ed546f8ed37b301eb4fe6c94676.jpg" alt="">
+                        <h4>demo1</h4>
+                        <p>
+                            其实，没有什么东西是不能放手的。时日渐远，当你回望，你会发现，你曾经以为不
+                            可以放手的东西，只是生命里的一块跳板，令你成长。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    底部-->
+    <bottom-div :navigation_datas="navigation_datas"></bottom-div>
+</div>
+<body>
+</body>
+<!--头部-->
+<template id="head_style">
+    <!--头部-->
+    <div class="head">
+        <!--    居中内容-->
+        <div class="centered_content">
+            <!--        内容-->
+            <div class="content">
+                <div class="logo_image">
+                    <img src="static/images/20201122185707.png" alt="" height="52">
+                </div>
+                <!--            导航栏-->
+                <div class="navigation">
+                    <ul v-navigationselect>
+                        <li v-for="tage in navigation_datas" style="float: left">
+                            <a href="#">{{tage[0]}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<!--底部-->
+<template id="bottom_style">
+    <div class="bottom_placeholder">
+        <div class="bottom_center">
+            <!--            导航栏-->
+            <div class="bottom_navigation">
+                <ul>
+                    <li v-for="tage in navigation_datas" style="float: left">
+                        <a href="#">{{ tage[0] }}</a>
+                    </li>
+                </ul>
+            </div>
+            <!--            搜索框-->
+            <div class="bottom_search_box">
+                <input type="text" placeholder="搜索">
+            </div>
+        </div>
+    </div>
+</template>
+<script src="static/js/index_1_copy.js"></script>
+</html>
