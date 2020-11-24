@@ -7,13 +7,19 @@
     <script src="static/js/vue-router.js"></script>
     <script src="static/js/jquery-3.5.1.js"></script>
     <link href="static/index_copy.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/versions.css">
+    <link rel="stylesheet" href="static/css/responsive.css">
+    <link rel="stylesheet" href="static/css/custom.css">
 </head>
 <body>
 <div id="base">
     <!--    头部-->
     <head-div :navigation_datas="navigation_datas"></head-div>
     <!--    身体-->
-    <body-div></body-div>
+    <router-view></router-view>
     <!--    底部-->
     <bottom-div :navigation_datas="navigation_datas"></bottom-div>
 </div>
@@ -32,16 +38,35 @@
                 <!--            导航栏-->
                 <div class="navigation">
                     <ul v-navigationselect>
-                        <li v-for="tage in navigation_datas" style="float: left">
-                            <a href="#">{{tage[0]}}</a>
+                        <li style="float: left">
+                            <router-link to="/index">关于我们</router-link>
                         </li>
+                        <li style="float: left">
+                            <router-link to="/issue">问题</router-link>
+                        </li>
+                        <li style="float: left">
+                            <router-link to="/incident">事件</router-link>
+                        </li>
+                        <li style="float: left">
+                            <router-link to="/gallery">画廊</router-link>
+                        </li>
+                        <li style="float: left">
+                            <router-link to="/multimedia">多媒体</router-link>
+                        </li>
+                        <li style="float: left">
+                            <router-link to="/WeChat">微信</router-link>
+                        </li>
+                        <li style="float: left">
+                            <router-link to="/relation">联系</router-link>
+                        </li>
+
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </template>
-<!--身体-->
+<!--关于我们 页面-->
 <template id="body_style">
     <!--    身体-->
     <div class="body_1">
@@ -171,6 +196,416 @@
         </div>
     </div>
 </template>
+<!--问题 页面-->
+<template id="index_1_page">
+    <div class="index_1_copy_body">
+        <div class="index_1_copy_center_content">
+            <div class="index_1_copy_content_1">
+                <h3>问题与计划</h3>
+                <p>我本来就不欠你什么。从我这里，你该拿的，不该拿的，你都拿了。我没说话，也没觉得有什么问题。只是以后不会了<br>
+                    长大了，不能总做父母的小棉袄，你要成为他们的防弹衣，还要做自己的铠甲!
+                </p>
+            </div>
+            <div class="index_1_copy_content_2">
+                <!--                左内容-->
+                <div class="index_1_copy_left_content">
+                    <img src="static/images/b8c45342aeb02ceda1e1c838730c02ab9631f3c4.png" alt="">
+                    <h4>"梦想注定是孤独的旅程，路上少不了质疑和嘲笑，但那又怎样，哪怕遍体鳞伤也要勇往直前。</h4>
+                    <p>非让现实给你一巴掌，你才知道社会有多虚伪，非让所谓的朋友把你伤的什么都不是，你才知道人心可畏。</p>
+                    <p>与其违心赔笑，不如一人安静，与其在意别人的背弃和不善，不如经营自己的尊严和美好。</p>
+                </div>
+                <!--                右内容-->
+                <div class="index_1_copy_right_content">
+                    <div class="index_1_copy_right_a">
+                        <img src="static/images/7bc9a8fc5b033ed546f8ed37b301eb4fe6c94676.jpg" alt="">
+                        <h4>demo1</h4>
+                        <p>
+                            其实，没有什么东西是不能放手的。时日渐远，当你回望，你会发现，你曾经以为不
+                            可以放手的东西，只是生命里的一块跳板，令你成长。
+                        </p>
+                    </div>
+                    <div class="index_1_copy_right_a">
+                        <img src="static/images/7bc9a8fc5b033ed546f8ed37b301eb4fe6c94676.jpg" alt="">
+                        <h4>demo1</h4>
+                        <p>
+                            其实，没有什么东西是不能放手的。时日渐远，当你回望，你会发现，你曾经以为不
+                            可以放手的东西，只是生命里的一块跳板，令你成长。
+                        </p>
+                    </div>
+                    <div class="index_1_copy_right_a">
+                        <img src="static/images/7bc9a8fc5b033ed546f8ed37b301eb4fe6c94676.jpg" alt="">
+                        <h4>demo1</h4>
+                        <p>
+                            其实，没有什么东西是不能放手的。时日渐远，当你回望，你会发现，你曾经以为不
+                            可以放手的东西，只是生命里的一块跳板，令你成长。
+                        </p>
+                    </div>
+                    <div class="index_1_copy_right_a">
+                        <img src="static/images/7bc9a8fc5b033ed546f8ed37b301eb4fe6c94676.jpg" alt="">
+                        <h4>demo1</h4>
+                        <p>
+                            其实，没有什么东西是不能放手的。时日渐远，当你回望，你会发现，你曾经以为不
+                            可以放手的东西，只是生命里的一块跳板，令你成长。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<!--事件 页面-->
+<template id="index_2page">
+    <div id="event" data-scroll-index="3" class="section wb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>事件</h3>
+                <p class="lead">同样的错误你并不会犯两次，第二次犯错误的时候，其实已经不是错误了，而是你的选择。<br>
+                    与其埋怨世界，不如改变自己。管好自己的心，做好自己的事，比什么都强。人生无完美，曲折亦风景。
+                </p>
+            </div><!-- end title -->
 
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="participate-wrap">
+                        <small>致自己的励志说说带图片</small>
+                        <figure>
+                            <img src="static/images/W.jpg" alt="" class="img-responsive">
+                            <figcaption><a href="#" class="global-radius"> <i class="flaticon-unlink"></i> </a>
+                            </figcaption>
+                        </figure>
+                        <div class="event_dit">
+                            <h4>女生男生都可以发的2018超拽酷炫说说</h4>
+                            <ul>
+                                <li><a href="#"> <i class="fa fa-calendar"></i> 24-10-2015 </a></li>
+                                <li><a href="#"> <i class="fa fa-clock-o"></i> 7:00 PM to 9:00 PM </a></li>
+                                <li><a href="#"> <i class="fa fa-map-marker"></i> NY City, USA </a></li>
+                            </ul>
+                            <p>无论有多困难，都坚强地抬头挺胸，告诉所有人，你并非他们想象的那样不堪一击。</p>
+                            <a href="event-detail.html" class="btn btn-light btn-radius btn-brd grd1">详情</a>
+                        </div>
+                    </div><!-- end participate -->
+                </div><!-- end col -->
+
+                <div class="col-md-4">
+                    <div class="participate-wrap">
+                        <small>写给2018的自己的经典励志说说大全</small>
+                        <figure>
+                            <img src="static/images/4a5301b253ce45ed52dd5a2b0cf983c1ebcbbe5a.jpg" alt=""
+                                 class="img-responsive">
+                            <figcaption><a href="#" class="global-radius"> <i class="flaticon-unlink"></i> </a>
+                            </figcaption>
+                        </figure>
+                        <div class="event_dit">
+                            <h4>致自己的简单唯美一段话说说</h4>
+                            <ul>
+                                <li><a href="#"> <i class="fa fa-calendar"></i> 24-10-2015 </a></li>
+                                <li><a href="#"> <i class="fa fa-clock-o"></i> 7:00 PM to 9:00 PM </a></li>
+                                <li><a href="#"> <i class="fa fa-map-marker"></i> NY City, USA </a></li>
+                            </ul>
+                            <p>只要内心不乱，外界就很难改变你什么。不要艳羡他人，不要输掉自己。</p>
+                            <a href="event-detail.html" class="btn btn-light btn-radius btn-brd grd1">详情</a>
+                        </div>
+                    </div><!-- end participate -->
+                </div><!-- end col -->
+
+                <div class="col-md-4">
+                    <div class="participate-wrap">
+                        <small>2018晚安心语睡前一句暖心的说说</small>
+                        <figure>
+                            <img src="static/images/34f8734e4cc5b79e43934282e9794cf980da5c6f.jpg" alt=""
+                                 class="img-responsive">
+                            <figcaption><a href="#" class="global-radius"> <i class="flaticon-unlink"></i> </a>
+                            </figcaption>
+                        </figure>
+                        <div class="event_dit">
+                            <h4>晚安心语致自己的一句话说说</h4>
+                            <ul>
+                                <li><a href="#"> <i class="fa fa-calendar"></i> 24-10-2015 </a></li>
+                                <li><a href="#"> <i class="fa fa-clock-o"></i> 7:00 PM to 9:00 PM </a></li>
+                                <li><a href="#"> <i class="fa fa-map-marker"></i> NY City, USA </a></li>
+                            </ul>
+                            <p>活着一天，就是有福气，就该珍惜。当我哭泣我没有鞋子穿的时辰，我发觉有人却没有脚。</p>
+                            <a href="event-detail.html" class="btn btn-light btn-radius btn-brd grd1">详情</a>
+                        </div>
+                    </div><!-- end participate -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div>
+</template>
+<!--画廊 页面-->
+<template id="index_3page">
+    <div id="gallery" data-scroll-index="4" class="section lb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>画廊</h3>
+                <p class="lead">成熟，应该是能包容不一样的声音，和接受异于自己的风格。晚安~<br>做小孩儿的时候，我好像从没有体会过小孩儿的快乐，等我长大了，却要突然承受成年人该承受的一切，倒也没什么不妥，只是觉得我好像错过了什么，每次想起来，挺空的。
+                </p>
+            </div><!-- end title -->
+
+            <div class="gallery-menu row">
+                <div class="col-md-12">
+                    <div class="button-group filter-button-group text-center" id="click_data">
+                        <button class="active" data-filter="*" id="click_1">所有</button>
+                        <button data-filter=".gal_a" id="click_2">游戏</button>
+                        <button data-filter=".gal_b" id="click_3">生活</button>
+                        <button data-filter=".gal_c" id="click_4">IT</button>
+                        <button data-filter=".gal_d" id="click_5">科技</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-list row isotope" style="position: relative; overflow: hidden; height: 750px;"
+                 id="images_data">
+                <div class="col-md-4 col-sm-6 gallery-grid gal_a gal_b isotope-item"
+                     style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);"
+                     id="images_data_1" number="1">
+                    <div class="gallery-single fix">
+                        <img src="static/images/7c55731bade1ae898e65e4c973c03294bf9e0a47.jpg" class="img-responsive"
+                             alt="Image">
+                        <div class="img-overlay">
+                            <a href="static/images/7c55731bade1ae898e65e4c973c03294bf9e0a47.jpg"
+                               data-rel="prettyPhoto[gal]"
+                               class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid gal_c gal_b isotope-item"
+                     style="position: absolute; left: 0px; top: 0px; transform: translate3d(390px, 0px, 0px);"
+                     id="images_data_2" number="2">
+                    <div class="gallery-single fix">
+                        <img src="static/images/9f7acd73c82d6d9b84bab9d425af07900a4ae7fe.jpg" class="img-responsive"
+                             alt="Image">
+                        <div class="img-overlay">
+                            <a href="static/images/9f7acd73c82d6d9b84bab9d425af07900a4ae7fe.jpg"
+                               data-rel="prettyPhoto[gal]"
+                               class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c isotope-item"
+                     style="position: absolute; left: 0px; top: 0px; transform: translate3d(780px, 0px, 0px);"
+                     id="images_data_3" number="3">
+                    <div class="gallery-single fix">
+                        <img src="static/images/396917b375efc9413066010e8ce8e33609582295.jpg" class="img-responsive"
+                             alt="Image">
+                        <div class="img-overlay">
+                            <a href="static/images/396917b375efc9413066010e8ce8e33609582295.jpg"
+                               data-rel="prettyPhoto[gal]"
+                               class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid gal_b gal_a isotope-item"
+                     style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 375px, 0px);"
+                     id="images_data_4" number="4">
+                    <div class="gallery-single fix">
+                        <img src="static/images/be2f63958f73abf9f12f5a8e9b4886bebe0cab42.jpg" class="img-responsive"
+                             alt="Image">
+                        <div class="img-overlay">
+                            <a href="static/images/be2f63958f73abf9f12f5a8e9b4886bebe0cab42.jpg"
+                               data-rel="prettyPhoto[gal]"
+                               class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c isotope-item"
+                     style="position: absolute; left: 0px; top: 0px; transform: translate3d(390px, 375px, 0px);"
+                     id="images_data_5" number="5">
+                    <div class="gallery-single fix">
+                        <img src="static/images/c3ca8f10ee5cb4718a4f791d9e32403de9abc36d.jpg" class="img-responsive"
+                             alt="Image">
+                        <div class="img-overlay">
+                            <a href="static/images/c3ca8f10ee5cb4718a4f791d9e32403de9abc36d.jpg"
+                               data-rel="prettyPhoto[gal]"
+                               class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid gal_c gal_d isotope-item"
+                     style="position: absolute; left: 0px; top: 0px; transform: translate3d(780px, 375px, 0px);"
+                     id="images_data_6" number="6">
+                    <div class="gallery-single fix">
+                        <img src="static/images/f0d9e9062134c3d71f877a468804160eaf21cd80.jpg" class="img-responsive"
+                             alt="Image">
+                        <div class="img-overlay">
+                            <a href="static/images/f0d9e9062134c3d71f877a468804160eaf21cd80.jpg"
+                               data-rel="prettyPhoto[gal]"
+                               class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<!--多媒体 页面-->
+<template id="index_4page">
+    <div id="media" data-scroll-index="5" class="section wb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>多媒体</h3>
+                <p class="lead">感情哪来什么势均力敌，就是心存侥幸的期盼着你也能像我爱你一样爱我罢了。<br> 喜欢一个人的时候心里会想什么?会想以后。</p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="issuse-wrap2 clearfix">
+                        <div class="post-media wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <img src="static/images/2309d6db2405a1e20eb5e04d93d590b51a3e549a.jpg" alt=""
+                                 class="img-responsive img-rounded">
+                            <a href="https://www.bilibili.com/video/BV16k4y1z7NL" data-rel="prettyPhoto[gal]"
+                               class="playbutton"><i class="flaticon-play-button"></i></a>
+                        </div><!-- end media -->
+                        <h4>最好的爱情，不过是遇见一个人，先相见恨晚，后余生与共。</h4>
+                        <p>我们一起看月亮爬上来，失眠的夜爱的人，会不会向你告白。晚安~</p>
+                    </div><!-- end issue -->
+                </div><!-- end col -->
+
+                <div class="col-md-4">
+                    <div class="issuse-wrap2 clearfix">
+                        <div class="post-media wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <img src="static/images/b87d0b6548217b5df373990e009568f2417b0205.jpg" alt=""
+                                 class="img-responsive img-rounded">
+                            <a href="https://www.bilibili.com/video/BV1ak4y1z7n6" data-rel="prettyPhoto[gal]"
+                               class="playbutton"><i class="flaticon-play-button"></i></a>
+                        </div><!-- end media -->
+                        <h4>人总是年纪越大越爱隐藏自己，装着什么都无所谓、不关心，好像用孤单铸一身铠甲，就可以避免受伤。</h4>
+                        <p>好像是因为最亲近的时候已经过去了，所以现在，不管朝哪边走，不管怎样走，不管有多么想更靠近一些，都在把你推得更远呢</p>
+                    </div><!-- end issue -->
+                </div><!-- end col -->
+
+                <div class="col-md-4">
+                    <div class="issuse-wrap2 clearfix">
+                        <div class="post-media wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                            <img src="static/images/30ceac75cee90760968091ac544794e7c7576875.jpg" alt=""
+                                 class="img-responsive img-rounded">
+                            <a href="https://www.bilibili.com/video/BV11f4y1y7T8" data-rel="prettyPhoto[gal]"
+                               class="playbutton"><i class="flaticon-play-button"></i></a>
+                        </div><!-- end media -->
+                        <h4>我是一个任性的孩子，我想擦去一切不幸。我想在大地上，画满窗子。让所有习惯黑暗的眼睛，都习惯光明</h4>
+                        <p>一到晚上，空间的质量就特别高，该丧的丧，该骚的骚，大家都很会无病呻吟，我就不一样，我只想你。</p>
+                    </div><!-- end issue -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div>
+</template>
+<!--微信 页面-->
+<template id="index_5page">
+    <div id="blog" data-scroll-index="6" class="section lb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>微信</h3>
+                <p class="lead">岁月也不算冗长，你我都善良，我见到你的时候，还是会笑的。<br>
+                    寂寞的人总是会用心的记住他生命中出现过的每一个人，于是我总是意犹未尽地想起你在每个星光陨落的晚上一遍一遍数我的寂寞。
+                </p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-lg-4">
+                    <div class="post-box">
+                        <div class="post-thumb">
+                            <img src="static/images/df778db5e83ef80d765b2caef7c3e03649ad3306.jpg" class="img-responsive"
+                                 alt="post-img">
+                            <div class="date">
+                                <span>九月</span>
+                                <span>12</span>
+                            </div>
+                        </div>
+                        <div class="post-info">
+                            <h4>人生短短几十年，不要给自己留下了什么遗憾，想笑就笑，想哭就哭，该爱的时候就去爱，无谓压抑自己。</h4>
+                            <p>对待生命你不妨大胆冒险一点，因为好歹你要失去它。如果这世界上真有奇迹，那只是努力的另一个名字。生命中最难的阶段不是没有人懂你，而是你不懂你自己。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-4">
+                    <div class="post-box">
+                        <div class="post-thumb">
+                            <img src="static/images/87ebbed51b4f8d9cc9bbc56e068f60deba74c464.jpg" class="img-responsive"
+                                 alt="post-img">
+                            <div class="date">
+                                <span>7月</span>
+                                <span>23</span>
+                            </div>
+                        </div>
+                        <div class="post-info">
+                            <h4>希望以后的你，能过得开心，自在而舒服，不要一个人站在夜色下的风口。</h4>
+                            <p>有温度的厨房，和家人饭后的有说有笑，还有舒服的床，果香味的床单和被子，这些以前被忽略的温柔，离家越远越清晰。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-4">
+                    <div class="post-box">
+                        <div class="post-thumb">
+                            <img src="static/images/393f27d0f519a46c47598e64bca5fa0d66ca8c71.jpg" class="img-responsive"
+                                 alt="post-img">
+                            <div class="date">
+                                <span>三月</span>
+                                <span>21</span>
+                            </div>
+                        </div>
+                        <div class="post-info">
+                            <h4>人与人刚认识的时候，大概是最好的吧。</h4>
+                            <p>每个人都会在某个时期遇到一个当下来说最重要的人。只不过有些人很幸运，在那以后的每个时期，身边最重要的都是同一人。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</template>
+<!--联系 页面-->
+<template id="index_6page">
+    <div id="donate" data-scroll-index="7" class="section db">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>联系</h3>
+                <p class="lead">总有一天你会明白，委屈要自己消化，故事不用逢人就讲。真正理解你的没有几个，大多人只，会站在他们自己的立场，偷看你的笑话。你能做的，是把秘密藏起来，然后一步一步变强大。<br>
+                    想念一个人，需要冲动的感觉。思念一个人，需要深刻的烙印。接近一个人，需要满怀的诚意。爱上一个人，需要十足的勇气。放弃一个人，谈何容易。</p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact_form">
+                        <div id="message"></div>
+                        <form id="signupForm" class="table_user_data">
+                            <fieldset class="row-fluid">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="name" id="name" class="form-control name"
+                                           placeholder="姓名" aria-invalid="false">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="phonenumber" id="phonenumber"
+                                           class="form-control phonenumber"
+                                           placeholder="手机号码" aria-invalid="true">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="email" name="email" id="email" class="form-control email"
+                                           placeholder="邮件">
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <textarea class="form-control content" name="content" id="content" rows="6"
+                                          placeholder="内容"></textarea>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 text-center">
+                                    <button type="submit" value="1" id="submit"
+                                            class="btn btn-light btn-radius btn-brd grd1 btn-block">提交
+                                    </button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div>
+</template>
 <script src="static/js/index_copy.js"></script>
 </html>

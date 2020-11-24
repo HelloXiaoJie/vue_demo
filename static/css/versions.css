@@ -221,7 +221,7 @@ body.politics_version .contact_form {
     border-color: #151515;
 }
 
-body.politics_version .contact_form .form-control {
+.contact_form .form-control {
     background-color: #1a1a1a;
     border: 1px solid #1a1a1a;
 }
