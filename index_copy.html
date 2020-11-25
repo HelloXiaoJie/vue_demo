@@ -569,42 +569,40 @@
                 <h3>联系</h3>
                 <p class="lead">总有一天你会明白，委屈要自己消化，故事不用逢人就讲。真正理解你的没有几个，大多人只，会站在他们自己的立场，偷看你的笑话。你能做的，是把秘密藏起来，然后一步一步变强大。<br>
                     想念一个人，需要冲动的感觉。思念一个人，需要深刻的烙印。接近一个人，需要满怀的诚意。爱上一个人，需要十足的勇气。放弃一个人，谈何容易。</p>
-            </div><!-- end title -->
+            </div>
 
             <div class="row">
                 <div class="col-md-12">
                     <div class="contact_form">
                         <div id="message"></div>
-                        <form id="signupForm" class="table_user_data">
-                            <fieldset class="row-fluid">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="name" id="name" class="form-control name"
-                                           placeholder="姓名" aria-invalid="false">
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="phonenumber" id="phonenumber"
-                                           class="form-control phonenumber"
-                                           placeholder="手机号码" aria-invalid="true">
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="email" name="email" id="email" class="form-control email"
-                                           placeholder="邮件">
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <fieldset class="row-fluid">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" name="name" id="name" class="form-control name"
+                                       placeholder="姓名" aria-invalid="false" v-model="name">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" name="phonenumber" id="phonenumber"
+                                       class="form-control phonenumber"
+                                       placeholder="手机号码" aria-invalid="true" v-model="phonenumber">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="email" name="email" id="email" class="form-control email"
+                                       placeholder="邮件" v-model="email">
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <textarea class="form-control content" name="content" id="content" rows="6"
-                                          placeholder="内容"></textarea>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 text-center">
-                                    <button type="submit" value="1" id="submit"
-                                            class="btn btn-light btn-radius btn-brd grd1 btn-block">提交
-                                    </button>
-                                </div>
-                            </fieldset>
-                        </form>
+                                          placeholder="内容" v-bind="content">{{content}}</textarea>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 text-center">
+                                <button type="submit" value="1" id="submit" @click="relation_submit"
+                                        class="btn btn-light btn-radius btn-brd grd1 btn-block">提交
+                                </button>
+                            </div>
+                        </fieldset>
                     </div>
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 <script src="static/js/index_copy.js"></script>

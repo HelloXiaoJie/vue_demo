@@ -116,7 +116,23 @@ const routes = [
     {
         path: '/relation',
         component: {
-            template: '#index_6page'
+            template: '#index_6page',
+            methods: {
+                // 提交数据
+                relation_submit: function () {
+                    // console.log($('textarea[name="content"]').val());
+                    this.content = $('textarea[name="content"]').val();
+                    alert('name:' + this.name + '\n' + 'phonenumber:' + this.phonenumber + '\n' + 'email:' + this.email + '\n' + 'content:' + this.content)
+                }
+            },
+            data: () => {
+                return {
+                    name: '',
+                    phonenumber: '',
+                    email: '',
+                    content: ''
+                }
+            }
         }
     }
 ];
